@@ -44,8 +44,13 @@ export default function NewItem(){
                     onChange={(e) => setName(e.target.value.replace(/[^a-zA-Z\s]/g, ''))}
                     onBlur ={() => setNameTouched(true)}
             
-                />
-                {nameTouched && name === '' && <p className="text-red-500 text-sm font-bold mt-1 animate-pulse">Name is required</p>}
+                />                
+                    {nameTouched && isInvalid && (
+                    <p className="text-red-500 text-sm font-bold mt-1">
+                        {name.length === 0 ? "Name is required" : "Invalid input: need two characters"}
+                    </p>
+                )}
+                    
             </div>
 
             <div className='flex justify-center'>
