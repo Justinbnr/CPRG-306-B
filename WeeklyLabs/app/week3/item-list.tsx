@@ -1,4 +1,4 @@
-export default function ItemList() {
+export default function Item() {
 
 const item1 = {
     name: "Milk, 4L carton",
