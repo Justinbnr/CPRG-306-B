@@ -4,7 +4,14 @@
 import { useState } from "react";
 import Item from "./item";
 
-export default function ItemList({ items = [] }) {
+interface ItemType {
+  id: string;
+  name: string;
+  category: string;
+  quantity: number;
+}
+
+export default function ItemList({ items = [] as ItemType[] }) {
   const [sortBy, setSortBy] = useState("name");
 
   
@@ -15,7 +22,7 @@ export default function ItemList({ items = [] }) {
     }
     acc[category].push(item);
     return acc;
-  }, {});
+  }, {} as Record<string, ItemType[]>);
 
   
   const sortedCategories = Object.keys(groupedItems).sort().map(category => ({
