@@ -1,4 +1,4 @@
-import ItemList from "../week6/item-list";
+import ItemList from "../week5/item-list";
 import itemsData from "./items.json";
 
 export default function week5Page() {

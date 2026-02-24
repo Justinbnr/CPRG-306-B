@@ -29,6 +29,13 @@ export default function Page() {
   </h2>
   </div>
 
+  <div className ="border-solid border-b-stone-800 bg-center" >
+    <h2>
+      <a href="/week6/">
+  Week 6 Item Shopping List</a>
+  </h2>
+  </div>
+
 </main>
   );
 }

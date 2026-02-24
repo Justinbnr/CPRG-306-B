@@ -11,7 +11,11 @@ interface ItemType {
   quantity: number;
 }
 
-export default function ItemList({ items = [] }: { items: ItemType[] }) {
+interface ItemListProps {
+  items: ItemType[];
+}
+
+export default function ItemList({ items = [] }: ItemListProps) {
   const [sortBy, setSortBy] = useState("name");
 
   
